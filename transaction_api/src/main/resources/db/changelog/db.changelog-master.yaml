@@ -1,0 +1,7 @@
+databaseChangeLog:
+
+  - include:
+      file: db/changelog/changes/001-create-transactions.yaml
+
+  - include:
+      file: db/changelog/changes/002-harden-transactions.yaml

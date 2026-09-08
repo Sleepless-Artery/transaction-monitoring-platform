@@ -1,0 +1,36 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 002-harden-transactions
+      author: transaction-platform
+
+      changes:
+
+        - modifyDataType:
+            tableName: transactions
+            columnName: country
+            newDataType: VARCHAR(2)
+
+        - sql:
+            sql: >
+              ALTER TABLE transactions
+              ADD CONSTRAINT chk_transactions_amount_positive
+              CHECK (amount > 0)
+
+        - sql:
+            sql: >
+              ALTER TABLE transactions
+              ADD CONSTRAINT chk_transactions_currency
+              CHECK (currency IN ('EUR', 'USD', 'GBP', 'CHF', 'JPY'))
+
+        - sql:
+            sql: >
+              ALTER TABLE transactions
+              ADD CONSTRAINT chk_transactions_country
+              CHECK (country ~ '^[A-Z]{2}$')
+
+        - sql:
+            sql: >
+              ALTER TABLE transactions
+              ADD CONSTRAINT chk_transactions_status
+              CHECK (status IN ('RECEIVED', 'PROCESSING', 'COMPLETED'))

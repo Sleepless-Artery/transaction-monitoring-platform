@@ -25,6 +25,9 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.idea/workspace.xml
+.gradle/
+.kotlin/
 
 ### NetBeans ###
 /nbproject/private/
@@ -38,3 +41,8 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+### Local ###
+.env
+application-local.yaml
+application-local.yml
