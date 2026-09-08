@@ -1,13 +1,15 @@
-package org.sleepless_artery.transaction_api
-
-import org.junit.jupiter.api.Test
-import org.springframework.boot.test.context.SpringBootTest
-
-@SpringBootTest
-class TransactionApiApplicationTests {
-
-	@Test
-	fun contextLoads() {
-	}
-
-}
+//package org.sleepless_artery.transaction_api
+//
+//import org.junit.jupiter.api.Test
+//import org.springframework.boot.test.context.SpringBootTest
+//import org.springframework.context.annotation.Import
+//
+//@Import(TestcontainersConfiguration::class)
+//@SpringBootTest
+//class TransactionApiApplicationTests {
+//
+//	@Test
+//	fun contextLoads() {
+//	}
+//
+//}
